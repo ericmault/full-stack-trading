@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>
+        <a href="/"> Strategy </a> 
+        <i class="angle double right icon"></i>
+        {{ strategy.name }} 
+    </h1>
+
+    <h2>
+        Stocks
+    </h2>
+    
+    <table class="ui inverted purple table">
+
+        <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+        <tr>
+            <td>{{ row.symbol }}</td>
+            <td>{{ row.name }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+
